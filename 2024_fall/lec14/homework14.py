@@ -9,7 +9,7 @@ def what_time_is_it(lang, filename):
     filename (str) - the filename into which the audio should be recorded
     '''
     #raise RuntimeError("You need to write this part!")
- (data, time) = datetime.datetime.now().isoformat().split("T")
+    (data, time) = datetime.datetime.now().isoformat().split("T")
     (hour, minutes, seconds) = time.split(":")
     if lang=="en":
         text = hour+" hours and "+minutes+" minutes"
@@ -32,7 +32,7 @@ def tell_me_a_joke(lang, audiofile):
     audiofile (str) - audiofile in which to record the joke
     '''
     #raise RuntimeError("You need to write this part!")
- filename = 'jokes_%s.txt'%(lang)
+    filename = 'jokes_%s.txt'%(lang)
     with open(filename) as f:
         jokes = f.readlines()
     jokes = random.choice(jokes)
@@ -51,7 +51,7 @@ def what_day_is_it(lang, audiofile):
     url (str) - URL that you can look up in order to see the calendar for this month and year
     '''
     #raise RuntimeError("You need to write this part!")
-today = datetime.date.today()
+    today = datetime.date.today()
     year = today.year
     month = today.month
     day = today.day
